@@ -23,4 +23,9 @@ class ExampleTest extends TestCase
 		$response = $this->get('/index');
 		$response->assertStatus(200);
 	}
+	
+	public function test_index_success() {
+		$response = $this->get('/index');
+		$response->assertStatus(200);
+	}
 }
