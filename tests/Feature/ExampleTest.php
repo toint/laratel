@@ -28,5 +28,10 @@ class ExampleTest extends TestCase
 		$response = $this->get('/index');
 		$response->assertStatus(200);
 	}
+
+	public function test_create_index_success() {
+		$response = $this->post('/index', []);
+		$response->assertStatus(200);
+	}
 	
 }
