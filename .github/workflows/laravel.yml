@@ -1,10 +1,9 @@
 name: Laravel
 
 on:
-  push:
-    branches: [ test ]
   pull_request:
-    branches: [ develop ]
+    branches:
+      - 'feature/**'
 
 jobs:
   run_if:
