@@ -19,11 +19,11 @@ class ExampleTest extends TestCase
         $response->assertStatus(200);
     }
 
-	public function test_create_home_success()
+	public function test_create_home_failed()
     {
         $response = $this->get('/home');
 
-        $response->assertStatus(200);
+        $response->assertStatus(404);
     }
 	
 }
