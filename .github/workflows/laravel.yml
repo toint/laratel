@@ -1,16 +1,13 @@
 name: Test before merge
 
 on:
-  pull_request:
-    types:
-      - opened
+  pull_request_review:
+    types: [submitted]
     branches:
       - 'feature/**'
-  workflow_run:
-      workflows: [Build]
-      types: [completed]
 jobs:
-  run_if:      
+  approved:
+    if: github.event.review.state == 'approved'      
     runs-on: ubuntu-latest
     steps:
     - uses: shivammathur/setup-php@15c43e89cdef867065b0213be354c2841860869e
